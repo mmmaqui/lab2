@@ -1,12 +1,29 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-<title>New Page Title</title>
-</head>
-<body>
 
-<h1>11This is a New Heading1</h1>
-<p>1This is a New paragraph1.</p>
+	<head>
+		<title>My Webpage</title>
+	</head>
 
-</body>
-</html>
+	<body>
+
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<h3>Heading 3</h3>
+
+	<br>
+
+	<p>^ Line Break ^</p>
+	<p>Paragraph 1</p>
+	<p>Paragraph 2</p>
+
+	<a href="http://apcwebprog.csf.ph/~gfmarquez/lab2/week3/"> my hosted index.html link</a>
+	
+	<br><br>
+	
+	<img src="abigail.jpg" alt="Abi" width="1080" height="720">
+
+	</body>
+
+<html>
