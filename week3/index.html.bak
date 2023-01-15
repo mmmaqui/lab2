@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This is a comment -->
 
 <html>
 
@@ -10,14 +11,15 @@
 
 	<h1 style="font-size:150%; text-align:center;">Heading 1</h1>
 	<hr>
-	<h2> <i> Heading 2 </i> </h2>
+	<h2 style="background-color:violet;"> <i> Heading 2 </i> </h2>
 	<hr>
-	<h3>Heading 3</h3>
+	<h3 style="color:violet;">Heading 3</h3>
 	<hr>
 	<h4 style="font-size:50px;">Heading 4</h4>
 	<hr><hr>
 	
-	<pre style="color:red; font-family:verdana; background-color:white;">
+	<pre style="color:red; font-family:verdana; background-color:white; border:2px 
+	solid violet;">
 	My Bonnie <mark>lies</mark> over the ocean.
 
 		My <abbr title="Bonnie">Bonnie</abbr> lies <del>over</del> the sea.
