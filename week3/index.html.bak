@@ -20,11 +20,11 @@
 	<pre style="color:red; font-family:verdana; background-color:white;">
 	My Bonnie <mark>lies</mark> over the ocean.
 
-		My Bonnie lies <del>over</del> the sea.
+		My <abbr title="Bonnie">Bonnie</abbr> lies<del>over</del> the sea.
 
 			My <ins>Bonnie</ins> lies over the ocean.
   
-				Oh, bring back my Bonnie to me.
+				Oh, <sub>bring</sub> <sup>back</sup> my Bonnie to me.
 	</pre>
 
 	<br>
