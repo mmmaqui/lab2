@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+	<link rel="stylesheet" href="C:\webprog\lab2\week5\css\styles.css">
+  </head>
+  <body>
+    <main>
+      <!-- ***********************  ABOUT / PROFILE  *********************** -->
+      <header class="intro">
+		<div class="content-wrap">
+			<h1>Gabriel Dominic  F. Marquez</h1>
+			<h2>Freelance Web Developer + Data Analyst</h2>
 
+			<p>As I make this profile page, I currently am studying as a sophomore in Asia Pacific College
+			as a Computer Science Major, with specialization in CyberSecurity and Forensics.</p>
+			
+			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+			nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+			esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+			culpa qui officia deserunt mollit anim id est laborum."</p>
+		</div>
+      </header>
+	  
+	        <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
+      <section class="resume">
+		<div class="content-wrap">
+			<h2>My Programming Portfolio</h2>
+			<p>View selected projects below. More information can be found at <a href="https://www.youtube.com/shorts/f-A989FqyxI" target="_blank">gabrieldominic.com</a>.</p>
+        <section>
+          <h3>Featured Projects</h3>
+          <!-- <img src="C:\webprog\lab2\week5\placeholder images\annie-spratt-unsplash.jpg" alt="description of image"> -->
+          <p>To learn more about my recent projects, click on the links below:</p>
+		
+			<a class="btn" href="https://www.youtube.com/watch?v=-ZGlaAxB7nI&ab_channel=iwanPlays" target="_blank">Github Account</a>
+			<a class="btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">My Projects</a>
+			<a class="btn" href="https://www.youtube.com/watch?v=sgKK0YRQyMQ&list=LL&index=7&ab_channel=Maxises" target="_blank">Work Experience</a>
+        </section>
+		</div>
+      </section>
+
+
+        <!-- Copy this whole <section> block to add more schools. -->
+        <section class="education">
+
+				<h2 class="eductitle">Educational Background</h2>
+				<h3>Tenement Elementary School - Taguig City</h3>
+				<p><strong>2008-2015</strong></p>
+				<p>Here, I grew up studying in a public school, started as a kindergartner at the age of 4, until I graduated from elementary education by the age of 12.</p>
+				<h3>Thy Covenant Montesorri School - Taguig City</h3>
+				<p><strong>2015-2019</strong></p>
+				<p>This is where I spent 4 years of junior high school, have met great teachers, friends, which played a huge part on building up the person that I am, today.</p>
+				<h3>Pasay City South High School - Pasay City</h3>
+				<p><strong>2019-2021</strong></p>
+				<p>I graduated high school in Pasay as a STEM student. We have spent a year of face-to-face classes until a COVID-19 pandemic was declared by the start of year 2020.</p>
+
+		</section>
+        <!-- End of School block. -->
+      </section>
+
+      <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
+      <footer class="socials">
+
+			<h2>Let's Keep in Touch!</h2>
+
+			<!-- Social media and contact links. Add or remove any networks. -->
+			<ul>
+			  <li><a href="maaquui@gmail.com">maaquui@gmail.com</a></li>
+			  <li><a href="https://www.instagram.com/mmmaqi_/" target="_blank">Instagram</a></li>
+			  <li><a href="https://www.facebook.com/gabriel.dominic.169067/" target="_blank">Facebook</a></li>
+			  <li><a href="https://www.linkedin.com/in/gabriel-dominic-marquez-77527721a/" target="_blank">LinkedIn</a></li>
+
+			</ul>
+
+      </footer>
+	  
+    </main>
+  </body>
+</html>
