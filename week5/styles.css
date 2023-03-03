@@ -71,9 +71,7 @@ a {
 }
 
 .resume {
-	margin-bottom: 50px;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin: 50px 50px;
 	background-image: url(https://cutewallpaper.org/28/coding-wallpaper-black/2836228672.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
