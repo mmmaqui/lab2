@@ -19,6 +19,10 @@ body {
 	line-height: 1.5;
 }
 
+header {
+	position: fixed;
+}
+
 h1 {
 	font-size: 70px;
 	line-height: 1.0;
@@ -38,23 +42,24 @@ p {
 	font-family: Helvetica;
 }
 
-.home {
-	background-image: url(https://wallpaperset.com/w/full/3/2/5/292946.jpg);
+#home {
+	background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Download-Gif-Images.gif);
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
 	display:flex;
+	text-align: left;
+	justify-content: left;
+	padding-left: 70px;
+	align-items: center;
+	
 }
 
 .welcome {
-	font-size: 1;	
-	position:absolute;
-	left: 50px;
-	top: 170px;
 	transition: transform 0.5s ease-in;
 }
 
-.intro {
+#intro {
 	color: #F1FFFA;
 	background: #464E47;
 	padding: 8px;
@@ -64,11 +69,11 @@ p {
 a {
 	color: rgba(241, 255, 250, 80%);		
 }
-.socials a:hover {
+#socials a:hover {
 	color: #568259;
 	text-decoration: none;	
 }
-.socials {
+#socials {
 	background: rgb(204,252,203, 70%);
 	padding: 50px;
 	color: #F1FFFA;
@@ -76,18 +81,18 @@ a {
 
 }
 
-.resume .btn {
+#resume .btn {
 	color: #F1FFFA;
 	background: #464E47;
 	padding: 8px;
 	border-radius: 5px;
 }
 
-.resume .btn:hover {
+#resume .btn:hover {
 	background: rgba(0,36,27, 75%);	
 }
 
-.resume {
+#resume {
 	margin: 50px 50px;
 	background-image: url(https://cutewallpaper.org/28/coding-wallpaper-black/2836228672.jpg);
 	background-repeat: no-repeat;
@@ -104,14 +109,8 @@ a {
 	padding: 60px 0;
 }
 
-/* -----------------Profile Section----------------- */
-header {
-	background: #F1FFFA;
-}	
-/* -----------------Resume Section----------------- */
-
 /* -----------------Education----------------- */
-.education {
+#education {
 	margin-bottom: 50px;
 	margin-left: 50px;
 	margin-right: 50px;
@@ -123,15 +122,18 @@ header {
 }
 /* -----------------Navigation Bar----------------- */
 nav {
+	position: fixed;
+	width: 100%;
 	display:flex;
 	justify-content: space-around;
 	align-items: center;
 	min-height: 8vh;
-	background-color: #F1FFFA;
+	background-color: rgba(70, 78, 71, 80%);
 	font-family: Papyrus;	
 }
 
 .logo {
+	color: rgba(241, 255, 250, 80%);
 	line-height: 1;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -145,17 +147,16 @@ nav {
 
 .sections li{
 	list-style: none;
-
 }
 
 .sections a{
-	color: rgb(56, 51, 51);
+	color: rgba(241, 255, 250, 80%);
 	text-decoration: none;
 	font-weight: bold;
 }
 
 .sections a:hover{
-	color: rgba(56, 51, 51, 60%);
+	color: rgba(241, 255, 250, 50%);
 	cursor: alias;
 }
 
