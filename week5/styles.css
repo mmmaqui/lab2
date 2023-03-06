@@ -6,6 +6,7 @@ Color Palette https://coolors.co/f1fffa-ccfccb-96e6b3-568259-464e47
 #CCFCCB Matcha green (lightest shade)
 #F1FFFA Cream
 https://www.webfx.com/web-design/hex-to-rgb/
+#C7CCDB Navbar
 */
 
 /* -----------------Global Styles----------------- */
@@ -13,6 +14,7 @@ body {
 	color: #464E47;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	font-size: 15px
 	line-height: 1.5;
 }
@@ -104,6 +106,56 @@ header {
 	padding: 50px;
 	border-radius: 5px;
 }
-/* -----------------Contacts----------------- */
+/* -----------------Navigation Bar----------------- */
+nav {
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-image: url(https://i.pinimg.com/originals/ef/25/b3/ef25b3ab58dc9acc7063ac1a4a63b72d.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Papyrus;
+	
+}
+
+.logo {
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.sections {
+	display: flex;
+	justify-content: space-around;
+	width: 35%;
+}
+
+.sections li{
+	list-style: none;
+
+}
+
+.sections a{
+	color: rgb(56, 51, 51);
+	text-decoration: none;
+}
+
+.sections a:hover{
+	color: rgba(56, 51, 51, 60%);
+	cursor: alias;
+}
+
+.burger {
+	display: none;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: rgb(56, 51, 51);
+	margin: 5px
+
+}
 
 
