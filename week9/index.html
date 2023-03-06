@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+	<link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+		<?php
+		// define variables and set to empty values
+		$nameErr = $emailErr = $genderErr = $websiteErr = "";
+		$name = $email = $gender = $comment = $website = "";
+		
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		  if (empty($_POST["name"])) {
+			$nameErr = "Name is required";
+		  } else {
+			$name = test_input($_POST["name"]);
+			// check if name only contains letters and whitespace
+			if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+			  $nameErr = "Only letters and white space allowed";
+			}
+		  }
+		  
+		  if (empty($_POST["email"])) {
+			$emailErr = "Email is required";
+		  } else {
+			$email = test_input($_POST["email"]);
+			// check if e-mail address is well-formed
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			  $emailErr = "Invalid email format";
+			}
+		  }
+			
+		  if (empty($_POST["website"])) {
+			$website = "";
+		  } else {
+			$website = test_input($_POST["website"]);
+			// check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+			if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+			  $websiteErr = "Invalid URL";
+			}
+		  }
+		
+		  if (empty($_POST["comment"])) {
+			$comment = "";
+		  } else {
+			$comment = test_input($_POST["comment"]);
+		  }
+		
+		  if (empty($_POST["gender"])) {
+			$genderErr = "Gender is required";
+		  } else {
+			$gender = test_input($_POST["gender"]);
+		  }
+		}
+		
+		function test_input($data) {
+		  $data = trim($data);
+		  $data = stripslashes($data);
+		  $data = htmlspecialchars($data);
+		  return $data;
+		}
+		?>
+		
+		<h2>PHP Form Validation Example</h2>
+		<p><span class="error">* required field</span></p>
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+		  Name: <input type="text" name="name" value="<?php echo $name;?>">
+		  <span class="error">* <?php echo $nameErr;?></span>
+		  <br><br>
+		  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+		  <span class="error">* <?php echo $emailErr;?></span>
+		  <br><br>
+		  Website: <input type="text" name="website" value="<?php echo $website;?>">
+		  <span class="error"><?php echo $websiteErr;?></span>
+		  <br><br>
+		  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+		  <br><br>
+		  Gender:
+		  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+		  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+		  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
+		  <span class="error">* <?php echo $genderErr;?></span>
+		  <br><br>
+		  <input type="submit" name="submit" value="Submit">  
+		</form>
+		
+		<?php
+		echo "<h2>Your Input:</h2>";
+		echo $name;
+		echo "<br>";
+		echo $email;
+		echo "<br>";
+		echo $website;
+		echo "<br>";
+		echo $comment;
+		echo "<br>";
+		echo $gender;
+		?>
+		<nav class="navbar">
+			<div class="logo">
+				<h4 class="navtext" href="#">Navigation Bar</h4>
+			</div>
+
+			<ul class="sections">
+				<li>
+					<a href="#home">Home</a>
+				</li>
+				<li>
+					<a href="#intro">About</a>
+				</li>
+				<li>
+					<a href="#interests">Interests</a>
+				</li>
+				<li>
+					<a href="#resume">Projects</a>
+				</li>
+				<li>
+					<a href="#education">Education</a>
+				</li>
+				<li>
+					<a href="#socials">Contacts</a>
+				</li>
+			</ul>
+			<div class="burger"> 
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+
+	<section id="home">
+		<div  class="welcome">
+			<h1>Welcome!</h1>
+			<p>Traverse through the sections using the navigation bar.</p>
+		</div>
+	</section>
+
+    <section id="intro">
+		<div class="content-wrap">
+			<h1>Gabriel Dominic  F. Marquez</h1>
+			<h2>Freelance Web Developer + Data Analyst</h2>
+			<p>As I make this profile page, I currently am studying as a sophomore in Asia Pacific College
+			as a Computer Science Major, with specialization in CyberSecurity and Forensics.</p>
+			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+			nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+			esse cillum dolore eu fugiat nulla pariatur. Excepteur sint cupidatat non proident, sunt in 
+			culpa qui officia deserunt mollit anim id est laborum."</p>
+		</div>
+	</section>
+
+	<section id="interests">
+		<p>Interests Filler</p>
+	</section>
+
+    <section id="resume">
+		<div class="content-wrap">
+			<h2>My Programming Portfolio</h2>
+			<p>View selected projects below. More information can be found at <a href="https://www.youtube.com/shorts/f-A989FqyxI" target="_blank">gabrieldominic.com</a>.</p>
+          	<h3>Featured Projects</h3>
+         	 <!-- <img src="C:\webprog\lab2\week5\placeholder images\annie-spratt-unsplash.jpg" alt="description of image"> -->
+         	 <p>To learn more about my recent projects, click on the links below:</p>	
+			<a class="btn" href="https://www.youtube.com/watch?v=-ZGlaAxB7nI&ab_channel=iwanPlays" target="_blank">Github Account</a>
+			<a class="btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">My Projects</a>
+			<a class="btn" href="https://www.youtube.com/watch?v=sgKK0YRQyMQ&list=LL&index=7&ab_channel=Maxises" target="_blank">Work Experience</a>
+		</div>
+    </section>
+
+    <section id="education">
+				<h2 class="eductitle">Educational Background</h2>
+				<h3>Tenement Elementary School - Taguig City</h3>
+				<p><strong>2008-2015</strong></p>
+				<p>Here, I grew up studying in a public school, started as a kindergartner at the age of 4, until I graduated from elementary education by the age of 12.</p>
+				<h3>Thy Covenant Montesorri School - Taguig City</h3>
+				<p><strong>2015-2019</strong></p>
+				<p>This is where I spent 4 years of junior high school, have met great teachers, friends, which played a huge part on building up the person that I am, today.</p>
+				<h3>Pasay City South High School - Pasay City</h3>
+				<p><strong>2019-2021</strong></p>
+				<p>I graduated high school in Pasay as a STEM student. We have spent a year of face-to-face classes until a COVID-19 pandemic was declared by the start of year 2020.</p>
+	</section>
+
+    <footer id="socials">
+		<h2>Let's Keep in Touch!</h2>
+		<ul>
+		  <li><a href="maaquui@gmail.com">maaquui@gmail.com</a></li>
+		  <li><a href="https://www.instagram.com/mmmaqi_/" target="_blank">Instagram</a></li>
+		  <li><a href="https://www.facebook.com/gabriel.dominic.169067/" target="_blank">Facebook</a></li>
+		  <li><a href="https://www.linkedin.com/in/gabriel-dominic-marquez-77527721a/" target="_blank">LinkedIn</a></li>
+		</ul>
+    </footer>
+	  
+    </main>
+	<script src="script.js"></script>
+  </body>
+</html>
