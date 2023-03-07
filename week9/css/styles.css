@@ -1,0 +1,109 @@
+/* 
+Color Palette https://coolors.co/f1fffa-ccfccb-96e6b3-568259-464e47
+#464E47 Darkgreen
+#568259 Darkgreen(bit lighter)
+#96E6B3 Gelatin green (lighter)
+#CCFCCB Matcha green (lightest shade)
+#F1FFFA Cream
+https://www.webfx.com/web-design/hex-to-rgb/
+*/
+
+/* -----------------Global Styles----------------- */
+body {
+	color: #464E47;
+	margin: 0;
+	padding: 0;
+	font-size: 15px
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 70px;
+	line-height: 1.0;
+}
+
+h2 {
+	font-size: 45px;
+}
+
+h1, h2 {
+	font-family: Papyrus;
+	font-weight: 500;
+	margin: 0;
+	
+}
+p {
+	font-family: Helvetica;
+}
+
+
+.intro {
+	color: #F1FFFA;
+	background: #464E47;
+	padding: 8px;
+	margin: 0;
+}
+
+a {
+	color: rgba(241, 255, 250, 80%);		
+}
+.socials a:hover {
+	color: #568259;
+	text-decoration: none;	
+}
+.socials {
+	background: rgb(204,252,203, 70%);
+	padding: 50px;
+	color: #F1FFFA;
+	background: #464E47;
+
+}
+
+.resume .btn {
+	color: #F1FFFA;
+	background: #464E47;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+.resume .btn:hover {
+	background: rgba(0,36,27, 75%);	
+}
+
+.resume {
+	margin: 50px 50px;
+	background-image: url(https://cutewallpaper.org/28/coding-wallpaper-black/2836228672.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 50px;
+	border-radius: 5px;
+	color: #F1FFFA;
+	
+}
+
+.content-wrap {
+	width: 1800px;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+/* -----------------Profile Section----------------- */
+header {
+	background: #F1FFFA;
+}	
+/* -----------------Resume Section----------------- */
+
+/* -----------------Education----------------- */
+.education {
+	margin-bottom: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	background-image: url(https://i.pinimg.com/originals/ef/25/b3/ef25b3ab58dc9acc7063ac1a4a63b72d.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 50px;
+	border-radius: 5px;
+}
+/* -----------------Contacts----------------- */
+
+

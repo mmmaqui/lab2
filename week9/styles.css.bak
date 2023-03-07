@@ -147,7 +147,7 @@ nav {
 .sections {
 	display: flex;
 	justify-content: space-around;
-	width: 40%;
+	width: 30%;
 }
 
 .sections li{
@@ -227,6 +227,7 @@ nav {
 	}
 }
 
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -248,10 +249,17 @@ nav {
 	}
 }
 
-
 nav {
 	animation: fadeIn 3s;
 }
+
+.form {
+	media:"screen";
+	display: block;
+}
+
+
+
 
 .toggle .line1 {
 	transform: rotate(-45deg) translate(-5px, 6px);

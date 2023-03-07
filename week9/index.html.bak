@@ -98,11 +98,10 @@
 		  <li><a href="https://www.instagram.com/mmmaqi_/" target="_blank">Instagram</a></li>
 		  <li><a href="https://www.facebook.com/gabriel.dominic.169067/" target="_blank">Facebook</a></li>
 		  <li><a href="https://www.linkedin.com/in/gabriel-dominic-marquez-77527721a/" target="_blank">LinkedIn</a></li>
-		  <li><a href="http://localhost/lab2/week9/validation_complete.php" target="_blank">Guest Form</a></li>
+		  <li><a href="http://localhost/lab2/week9/index.php" target="_blank">Guest Form</a></li>
 		</ul>
     </footer>
-
-	
+	  
     </main>
 	<script src="script.js"></script>
   </body>
