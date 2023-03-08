@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
     <main>
@@ -68,7 +69,7 @@
     <section id="resume">
 		<div class="content-wrap">
 			<h2>My Programming Portfolio</h2>
-			<p>View selected projects below. More information can be found at <a href="https://www.youtube.com/shorts/f-A989FqyxI" target="_blank">gabrieldominic.com</a>.</p>
+			<p>View selected projects below. More information can be found at <a id="mylinks" href="https://www.youtube.com/shorts/f-A989FqyxI" target="_blank">gabrieldominic.com</a>.</p>
           	<h3>Featured Projects</h3>
          	 <!-- <img src="C:\webprog\lab2\week5\placeholder images\annie-spratt-unsplash.jpg" alt="description of image"> -->
          	 <p>To learn more about my recent projects, click on the links below:</p>	
@@ -94,15 +95,69 @@
     <footer id="socials">
 		<h2>Let's Keep in Touch!</h2>
 		<ul>
-		  <li><a href="maaquui@gmail.com">maaquui@gmail.com</a></li>
-		  <li><a href="https://www.instagram.com/mmmaqi_/" target="_blank">Instagram</a></li>
-		  <li><a href="https://www.facebook.com/gabriel.dominic.169067/" target="_blank">Facebook</a></li>
-		  <li><a href="https://www.linkedin.com/in/gabriel-dominic-marquez-77527721a/" target="_blank">LinkedIn</a></li>
-		  <li><a href="http://localhost/lab2/week9/validation_complete.php" target="_blank">Guest Form</a></li>
+		  <li id="mylinks"><a href="maaquui@gmail.com">maaquui@gmail.com</a></li>
+		  <li id="mylinks"><a href="https://www.instagram.com/mmmaqi_/" target="_blank">Instagram</a></li>
+		  <li id="mylinks"><a href="https://www.facebook.com/gabriel.dominic.169067/" target="_blank">Facebook</a></li>
+		  <li id="mylinks"><a href="https://www.linkedin.com/in/gabriel-dominic-marquez-77527721a/" target="_blank">LinkedIn</a></li>
+		  <li id="mylinks"><a href="http://localhost/lab2/week9/validation_complete.php" target="_blank">Guest Form</a></li>
 		</ul>
     </footer>
 
-	
+	<section style="margin: 50px; color: black;">
+        <h1 style="font-family: Helvetica;">My Guests</h1>
+        <br>
+        
+        <table style="border-collapse: collapse; width: 100%;color: black; font-family: monospace; font-size: 25px; text-align: left;">
+            <thead>
+                <tr style="font-family: Helvetica; padding: 18px; line-height: 2; background: #464E47; color: #F1FFFA;">
+                    <th >ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Website</th>
+                    <th>Gender</th>
+                    <th>Comment</th>
+                    <th>Sign Up Date</th>
+                </tr>
+            </thead>
+            <tbody style="line-height: 1.5;">
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "myDB";
+                
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM guest_list";
+                $result = $conn->query($sql);
+                
+                if (!$result) {
+                    die("Invalid query: " . $conn->error);
+                }
+
+                while($row = $result->fetch_assoc()) 
+                {
+                    echo "<tr>
+                    <td>" . $row["id"] . "</td>
+                    <td>" . $row["guest_name"] . "</td>
+                    <td>" . $row["email"] . "</td>
+                    <td>" . $row["website"] . "</td>
+                    <td>" . $row["gender"] . "</td>
+                    <td>" . $row["comment"] . "</td>
+                    <td>" . $row["reg_date"] . "</td>       
+                </tr>";
+                }
+                
+                ?>
+            </tbody>
+        </table>
+    </section>
+
     </main>
 	<script src="script.js"></script>
   </body>

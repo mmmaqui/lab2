@@ -9,7 +9,12 @@ https://www.webfx.com/web-design/hex-to-rgb/
 #C7CCDB Navbar
 */
 
+<?php
+header("Content-type: text/css");
+
 /* -----------------Global Styles----------------- */
+
+
 body {
 	color: #464E47;
 	margin: 0;
@@ -67,7 +72,7 @@ p {
 	
 }
 
-a {
+#mylinks {
 	color: rgba(241, 255, 250, 80%);		
 }
 #socials a:hover {
@@ -143,6 +148,7 @@ nav {
 	line-height: 1;
 	text-transform: uppercase;
 	letter-spacing: 5px;
+	margin-left: 50px;
 }
 
 .sections {
@@ -254,7 +260,7 @@ nav {
 	animation: fadeIn 3s;
 }
 
-.guests {
+.table {
 	margin: 50px;
 }
 
@@ -267,6 +273,7 @@ nav {
 .toggle .line3 {
 	transform: rotate(45deg) translate(-5px, -6px);
 }
+
 
 
 

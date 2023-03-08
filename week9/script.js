@@ -18,8 +18,6 @@ const navSlide = () => {
 	});
 }
 
-navSlide();
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener("click", function(e){
 		e.preventDefault();
@@ -34,5 +32,9 @@ window.onscroll = ()=>{
 	this.scrollY > 20 ? navbar.classList.add("sticky"):
 	navbar.classLift.remove("sticky")
 }
+
+navSlide();
+
+
 
 

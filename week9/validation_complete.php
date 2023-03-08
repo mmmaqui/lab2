@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>  
 <html>
 <head>
@@ -101,6 +100,7 @@ echo "<br>";
 echo $gender;
 ?>
 
+
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
@@ -118,8 +118,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	die("Connection failed: " . $conn->connect_error);
 	}
 	
-	$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-	VALUES ('$name', ' ', '$email')";
+	$sql = "INSERT INTO guest_list (guest_name, email, website, gender, comment)
+	VALUES ('$name', '$email', '$website', '$gender', '$comment')";
 	
 	if ($conn->query($sql) === TRUE) {
 	echo "New record created successfully";
@@ -130,6 +130,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	$conn->close();
 }
 ?>
+
+
+
+
 
 </body>
 </html>
