@@ -107,7 +107,7 @@
         <h1 style="font-family: Helvetica;">My Guests</h1>
         <br>
         
-        <table style="border-collapse: collapse; width: 100%;color: black; font-family: monospace; font-size: 25px; text-align: left;">
+        <table style="border-collapse: collapse; width: 100%; color: black; font-family: monospace; font-size: 25px; text-align: left;">
             <thead>
                 <tr style="font-family: Helvetica; padding: 18px; line-height: 2; background: #464E47; color: #F1FFFA;">
                     <th >ID</th>
